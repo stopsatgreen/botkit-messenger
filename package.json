@@ -27,7 +27,8 @@
   },
   "scripts": {
     "pretest": "jscs ./lib/",
-    "test": "mocha tests/*.js"
+    "test": "mocha tests/*.js",
+    "start": "node fb_space_bot"
   },
   "repository": {
     "type": "git",
