@@ -66,12 +66,12 @@ This bot demonstrates many of the core features of Botkit:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-if (!process.env.page_token) {
+if (!process.env.FACEBOOK_PAGE_ACCESS_TOKEN) {
     console.log('Error: Specify page_token in environment');
     process.exit(1);
 }
 
-if (!process.env.verify_token) {
+if (!process.env.FACEBOOK_VERIFY_TOKEN) {
     console.log('Error: Specify verify_token in environment');
     process.exit(1);
 }
@@ -98,8 +98,8 @@ if(ops.lt === false && ops.ltsubdomain !== null) {
 
 var controller = Botkit.facebookbot({
     debug: true,
-    access_token: process.env.page_token,
-    verify_token: process.env.verify_token,
+    access_token: process.env.FACEBOOK_PAGE_ACCESS_TOKEN,
+    verify_token: process.env.FACEBOOK_VERIFY_TOKEN,
 });
 
 var bot = controller.spawn({
